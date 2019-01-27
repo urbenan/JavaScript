@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <script> 
+
+var primZahlen; 
+var testZahl; 
+var testZahlMax; 
+
+
+var l;
+var l1;
+var l2;
+var n
+
+function calc() {
+  l=2400;
+  
+  
+  
+  
+  
+
+
+}
+
+
+
+
+window.addEventListener("load", init, false); 
+
+function init() { 
+  testZahl=0; 
+  testZahlMax=10; 
+  ausgabe(); 
+} 
+
+function primTest(testZahl) { 
+  var primTest=1; 
+  for(var n=2;n<testZahl;n++) { 
+    if ((testZahl/n)==Math.floor(testZahl/n)) primTest=0;   
+  } 
+  return primTest; 
+} 
+
+
+function primZahlen(testZahlMax) { 
+  var primArray=[]; 
+  for(var n=2;n<=testZahlMax;n++) { 
+    if (primTest(n)==1) { 
+      primArray.push(n); 
+    } 
+  } 
+  return primArray; 
+} 
+
+
+function ausgabe() { 
+  document.getElementById("prim").innerHTML=(primZahlen(10000)).toString(); 
+  
+  document.getElementById("result").innerHTML=10;
+
+} 
+
+
+
+
+
+    </script> 
+  </head> 
+  <body> 
+
+    <br /> 
+    <div id="legende">Prim</div> 
+    <div id="prim">Kein Status</div> 
+    <div id="result"></div>
+
+  </body> 
+</html> 
+
