@@ -15,16 +15,13 @@ var n
 
 function calc() {
   l=2400;
+  l2=120;
+  n=12;
+  l1=(l-(n*l2))/2;
   
   
   
-  
-  
-
-
 }
-
-
 
 
 window.addEventListener("load", init, false); 
@@ -32,6 +29,7 @@ window.addEventListener("load", init, false);
 function init() { 
   testZahl=0; 
   testZahlMax=10; 
+  calc();
   ausgabe(); 
 } 
 
@@ -56,25 +54,27 @@ function primZahlen(testZahlMax) {
 
 
 function ausgabe() { 
-  document.getElementById("prim").innerHTML=(primZahlen(10000)).toString(); 
+  //document.getElementById("prim").innerHTML=(primZahlen(10000)).toString(); 
   
-  document.getElementById("result").innerHTML=10;
+  document.getElementById("l").innerHTML="l="+l;
+  document.getElementById("l1").innerHTML="l1="+l1;
+  document.getElementById("l2").innerHTML="l2="+l2;
+  document.getElementById("n").innerHTML="n="+n;
+  document.getElementById("result").innerHTML=20;
 
 } 
-
-
-
-
 
     </script> 
   </head> 
   <body> 
 
     <br /> 
-    <div id="legende">Prim</div> 
+    <div id="legende">Dimension:</div> 
     <div id="prim">Kein Status</div> 
-    <div id="result"></div>
-
+    <div id="l"></div>
+    <div id="l1"></div>
+    <div id="l2"></div>
+    <div id="n"></div>
   </body> 
 </html> 
 
