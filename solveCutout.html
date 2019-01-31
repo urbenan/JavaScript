@@ -8,21 +8,21 @@ var testZahlMax;
 var result={};
 var l=[];
 var l1=[];
-var l2=[];
-var n=[];
+var ln1=[];
+var n1=[];
 
 function calc() {
   l[1]=2400;
-  l2[1]=120;
-  n[1]=12;
+  ln1[1]=120;
+  n1[1]=12;
   l1[1]=0;
-  for(l2[1]=120;l2[1]<=200;l2[1]++){
-   l1[1]=(l[1]-(n[1]*l2[1]))/2;
+  for(ln1[1]=120;ln1[1]<=200;ln1[1]++){
+   l1[1]=(l[1]-(n1[1]*ln1[1]))/2;
     if(2==2){
       result.l=l[1];
       result.l1=l1[1];
-      result.l2=l2[1];
-      result.n=n[1];
+      result.ln1=ln1[1];
+      result.n1=n1[1];
       break;
     }
   }
@@ -37,35 +37,12 @@ function init() {
   ausgabe(); 
 } 
 
-function primTest(testZahl) { 
-  var primTest=1; 
-  for(var n=2;n<testZahl;n++) { 
-    if ((testZahl/n)==Math.floor(testZahl/n)) primTest=0;   
-  } 
-  return primTest; 
-} 
-
-
-function primZahlen(testZahlMax) { 
-  var primArray=[]; 
-  for(var n=2;n<=testZahlMax;n++) { 
-    if (primTest(n)==1) { 
-      primArray.push(n); 
-    } 
-  } 
-  return primArray; 
-} 
-
-
 function ausgabe() { 
-  //document.getElementById("prim").innerHTML=(primZahlen(10000)).toString(); 
-  
   document.getElementById("l").innerHTML="l="+result.l;
   document.getElementById("l1").innerHTML="l1="+result.l1;
-  document.getElementById("l2").innerHTML="l2="+result.l2;
-  document.getElementById("n").innerHTML="n="+result.n;
+  document.getElementById("ln1").innerHTML="ln1="+result.ln1;
+  document.getElementById("n1").innerHTML="n1="+result.n1;
   document.getElementById("result").innerHTML=20;
-
 } 
 
     </script> 
@@ -77,8 +54,8 @@ function ausgabe() {
     <div id="prim">Kein Status</div> 
     <div id="l"></div>
     <div id="l1"></div>
-    <div id="l2"></div>
-    <div id="n"></div>
+    <div id="ln1"></div>
+    <div id="n1"></div>
   </body> 
 </html> 
 
