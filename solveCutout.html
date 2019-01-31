@@ -2,27 +2,31 @@
 <html> 
   <head> 
     <script> 
-
 var primZahlen; 
 var testZahl; 
 var testZahlMax; 
-
-
-var l;
-var l1;
-var l2;
-var n
+var result={};
+var l=[];
+var l1=[];
+var l2=[];
+var n=[];
 
 function calc() {
-  l=2400;
-  l2=120;
-  n=12;
-  l1=(l-(n*l2))/2;
-  
-  
-  
+  l[1]=2400;
+  l2[1]=120;
+  n[1]=12;
+  l1[1]=0;
+  for(l2[1]=120;l2[1]<=200;l2[1]++){
+   l1[1]=(l[1]-(n[1]*l2[1]))/2;
+    if(2==2){
+      result.l=l[1];
+      result.l1=l1[1];
+      result.l2=l2[1];
+      result.n=n[1];
+      break;
+    }
+  }
 }
-
 
 window.addEventListener("load", init, false); 
 
@@ -56,10 +60,10 @@ function primZahlen(testZahlMax) {
 function ausgabe() { 
   //document.getElementById("prim").innerHTML=(primZahlen(10000)).toString(); 
   
-  document.getElementById("l").innerHTML="l="+l;
-  document.getElementById("l1").innerHTML="l1="+l1;
-  document.getElementById("l2").innerHTML="l2="+l2;
-  document.getElementById("n").innerHTML="n="+n;
+  document.getElementById("l").innerHTML="l="+result.l;
+  document.getElementById("l1").innerHTML="l1="+result.l1;
+  document.getElementById("l2").innerHTML="l2="+result.l2;
+  document.getElementById("n").innerHTML="n="+result.n;
   document.getElementById("result").innerHTML=20;
 
 } 
