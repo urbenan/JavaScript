@@ -12,12 +12,8 @@ var ln1=[];
 var n1=[];
 
 function calc() {
-  l[1]=2400;
-  ln1[1]=120;
-  n1[1]=12;
-  l1[1]=0;
   for(ln1[1]=120;ln1[1]<=200;ln1[1]++){
-   l1[1]=(l[1]-(n1[1]*ln1[1]))/2;
+    l1[1]=(l[1]-(n1[1]*ln1[1]))/2;
     if(2==2){
       result.l=l[1];
       result.l1=l1[1];
@@ -31,8 +27,10 @@ function calc() {
 window.addEventListener("load", init, false); 
 
 function init() { 
-  testZahl=0; 
-  testZahlMax=10; 
+  l[1]=2400;
+  ln1[1]=120;
+  n1[1]=12;
+  l1[1]=0;
   calc();
   ausgabe(); 
 } 
@@ -48,10 +46,8 @@ function ausgabe() {
     </script> 
   </head> 
   <body> 
-
-    <br /> 
+    <br/> 
     <div id="legende">Dimension:</div> 
-    <div id="prim">Kein Status</div> 
     <div id="l"></div>
     <div id="l1"></div>
     <div id="ln1"></div>
