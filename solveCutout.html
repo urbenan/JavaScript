@@ -5,11 +5,14 @@
 var primZahlen; 
 var testZahl; 
 var testZahlMax; 
+var results={};
 var result={};
 var l=[];
 var l1=[];
 var ln1=[];
 var n1=[];
+
+var resultJSON=new Object();
 
 function init() { 
   l[1]=2400;
@@ -25,6 +28,7 @@ function init() {
 } 
 
 function calc() {
+resultJSON.results=[];
   for(ln1[1]=120;ln1[1]<=200;ln1[1]++){
     ln1[2]=ln1[1];
     n1[1]=Math.floor((l[1]-500)/ln1[1]);
@@ -32,10 +36,18 @@ function calc() {
     n1[2]=Math.floor((l[2]-500)/ln1[2]);
     l1[2]=(l[2]-(n1[2]*ln1[2]))/2;
     if(l1[1]==l1[2]){
+      result={};
       result.l=l[1];
       result.l1=l1[1];
       result.ln1=ln1[1];
       result.n1=n1[1];
+      resultJSON.results.push(result);
+      result={};
+      result.l=l[2];
+      result.l1=l1[2];
+      result.ln1=ln1[2];
+      result.n1=n1[2];
+      resultJSON.results.push(result);
       break;
     }
   }
@@ -48,7 +60,7 @@ function ausgabe() {
   document.getElementById("l1").innerHTML="l1="+result.l1;
   document.getElementById("ln1").innerHTML="ln1="+result.ln1;
   document.getElementById("n1").innerHTML="n1="+result.n1;
- document.getElementById("JSON").innerHTML=JSON.stringify(result);
+ document.getElementById("JSON").innerHTML=JSON.stringify(resultJSON);
 } 
 
     </script> 
